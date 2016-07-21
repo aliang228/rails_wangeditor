@@ -1,0 +1,8 @@
+Description:
+    install wangEditor for your application
+
+Example:
+    rails generate rails_wangeditor:install
+
+    This will create:
+        config/rails_wangeditor.rb

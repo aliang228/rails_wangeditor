@@ -1,0 +1,11 @@
+Description:
+    Copy model, migration and uploader to your application.
+
+Example:
+    rails generate rails_wangeditor:migration
+
+    This will create:
+        app/models/wangeditor/asset.rb
+        app/models/wangeditor/image.rb
+        db/migrate/xxxxxxxxx_create_wangeditor_assets.rb
+
