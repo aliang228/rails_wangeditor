@@ -10,7 +10,7 @@ rails_wangeditor will helps your rails app integrate with wangEditor, includes i
 ### Add this to your Gemfile
 
 ```ruby
-  gem 'rails_wangeditor'
+  gem 'rails_wangeditor', '>= 0.1.3'
 ```
 
 ### Run "bundle" command.
@@ -38,14 +38,14 @@ In Rails 4.0's production mode, please run 'rake wangeditor:assets', this method
 
 ```ruby
   1. <%= wangeditor_tag :content, 'default content value' %>
-     # or <%= wangeditor_tag :content, 'default content value', :input_html =>{style: "500px"} %>
+     # or <%= wangeditor_tag :content, 'default content value', :input_html =>{style: "height: 300px"} %>
 ```
 
 ```ruby
   2. <%= form_for @article do |f| %>
        ...
        <%= f.wangeditor :content %>
-       # or <%= f.wangeditor :content, style: "500px"%>
+       # or <%= f.wangeditor :content, style: "height: 300px"%>
        ...
      <% end %>
 ```
@@ -61,7 +61,7 @@ When you need to specify the owner_id：
 ### simple_form:
 
 ```ruby
-  <%= f.wangeditor :content, style: "500px"%>
+  <%= f.input :content, as: :wangeditor, :label => "正文",  :owner_id => current_user.id, :input_html => {style: "height: 300px" } %>
 ```
 
 ## Upload options configuration

@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.authors     = "rubycat"
   s.email       = "chenxueping1819@gmail.com"
-  s.homepage    = "http://github.com/a598799539"
+  s.homepage    = "https://github.com/a598799539/rails_wangeditor"
   s.summary     = "wangEditor for Ruby on Rails"
   s.description = "rails_wangeditor will helps your rails app integrate with wangEditor, including images uploading."
   s.license = 'MIT'
