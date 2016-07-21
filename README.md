@@ -1,4 +1,4 @@
-# wangEditor for Ruby on Rails  [![Gem Version](https://badge.fury.io/rb/rails_wangeditor.png)](http://badge.fury.io/rb/rails_wangeditor)
+# wangEditor for Ruby on Rails  [![Gem Version](https://badge.fury.io/rb/rails_wangeditor.svg)](http://badge.fury.io/rb/rails_wangeditor)
 
 wangEditor is an easy, fast and beautiful WYSIWYG javascript editor, visit [https://github.com/wangfupeng1988/wangEditor](https://github.com/wangfupeng1988/wangEditor) for details.
 rails_wangeditor will helps your rails app integrate with wangEditor, includes images uploading.
