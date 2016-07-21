@@ -44,7 +44,12 @@ module RailsWangeditor
 
     def main_app_root_url
       begin
-        main_app.root_url.slice(0, main_app.root_url.rindex(main_app.root_path)) + '/'
+        main_app_root_url = main_app.root_url.slice(0, main_app.root_url.rindex(main_app.root_path))
+        if ENV['RAILS_RELATIVE_URL_ROOT']
+          main_app_root_url += ENV['RAILS_RELATIVE_URL_ROOT'] + "/"
+        else
+          main_app_root_url += "/"
+        end
       rescue
         '/'
       end

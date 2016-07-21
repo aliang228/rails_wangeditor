@@ -14,7 +14,11 @@ class Wangeditor::AssetsController < ApplicationController
           logger.warn '=====Warning: the owner have not been created, "delete uploaded files automatically" will not work. ====' if defined?(logger) && @asset.owner_id == 0
           @asset.asset_type = @dir
           if @asset.save
-            render :text => @asset.asset.url
+            url = @asset.asset.url
+            if ENV['RAILS_RELATIVE_URL_ROOT']
+              url = ENV['RAILS_RELATIVE_URL_ROOT'] + url
+            end
+            render :text => url
           else
             show_error(@asset.errors.full_messages)
           end
@@ -25,7 +29,11 @@ class Wangeditor::AssetsController < ApplicationController
         begin
           uploader = "Wangeditor::#{@dir.camelize}Uploader".constantize.new
           uploader.store!(@imgFile)
-          render :text => ({:error => 0, :url => uploader.url}.to_json)
+          url = uploader.url
+          if ENV['RAILS_RELATIVE_URL_ROOT']
+            url = ENV['RAILS_RELATIVE_URL_ROOT'] + url
+          end
+          render :text => url
         rescue CarrierWave::UploadError => e
           show_error(e.message)
         rescue Exception => e
