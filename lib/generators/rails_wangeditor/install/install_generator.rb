@@ -21,10 +21,10 @@ module RailsWangeditor
 
     def insert_or_copy_css_files
       if File.exist?('app/assets/stylesheets/application.css')
-        insert_into_file "app/assets/stylesheets/application.css", "*= require wangEditor\n", :before => "*= require_self"
+        insert_into_file "app/assets/stylesheets/application.css", "*= require wangEditor/wangEditor\n", :before => "*= require_self"
       else
         if File.exist?('app/assets/stylesheets/application.scss')
-          insert_into_file "app/assets/stylesheets/application.scss", "*= require wangEditor\n", :before => "*= require_self"
+          insert_into_file "app/assets/stylesheets/application.scss", "*= require wangEditor/wangEditor\n", :before => "*= require_self"
         else
           copy_file "application.css", "app/assets/stylesheets/application.css"
         end
