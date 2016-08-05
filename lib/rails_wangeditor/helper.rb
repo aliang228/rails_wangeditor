@@ -56,15 +56,15 @@ module RailsWangeditor
     end
 
     def js_replace(dom_id, options = {})
-      "$('document').ready(function(){
-         wangEditor.config.mapAk = '#{RailsWangeditor.mapAk}';
-         var editor = new wangEditor('#{dom_id}');
-         wangEditor.config.printLog = false;
+      "wangEditor.config.mapAk = '#{RailsWangeditor.mapAk}';
+       var editor = new wangEditor('#{dom_id}');
+       wangEditor.config.printLog = false;
+       if(editor != null && editor.config != null){
          editor.config.pasteFilter = false;
          editor.config.uploadImgFileName = 'imgFile'
          editor.config.uploadImgUrl = '#{wangeditor_upload_json_path(:owner_id => options.delete(:owner_id), :owner_type => options.delete(:owner_type))}'
          editor.create();
-      });"
+       }"
     end
 
     def build_text_area_tag(name, method, template, options, input_html)
@@ -81,7 +81,7 @@ module RailsWangeditor
       end
     end
   end
-  
+
   module Builder
     def wangeditor(method, options = {})
       @template.send("wangeditor", @object_name, method, objectify_options(options))
