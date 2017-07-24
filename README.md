@@ -5,12 +5,13 @@ rails_wangeditor will helps your rails app integrate with wangEditor, includes i
 
 ![](http://images2015.cnblogs.com/blog/138012/201509/138012-20150910004209122-1645253022.png)
 
+
 ## Installation and usage
 
 ### Add this to your Gemfile
 
 ```ruby
-  gem 'rails_wangeditor', '>= 0.1.3'
+  gem 'rails_wangeditor', '>= 0.3.2'
 ```
 
 ### Run "bundle" command.
@@ -76,9 +77,6 @@ You can customize some option for uploading.
 
   # Allowed file types for upload.
   config.upload_image_ext = %w[gif jpg jpeg png bmp]
-
-  # replace to your own baidu mapAk
-  config.mapAk = 'zlXbfvvyWN0vrO5toWqGhLspGHMIeFgn';
 
   # Porcess upload image size, need mini_magick
   #     before    => after
