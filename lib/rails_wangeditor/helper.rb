@@ -57,7 +57,8 @@ module RailsWangeditor
 
     def js_replace(dom_id, options = {})
       "var E = window.wangEditor;
-       var editor = new E('#{dom_id}');
+       var editor = new E('##{dom_id}');
+       editor.customConfig.debug = true;
        editor.customConfig.uploadImgFileName = 'imgFile';
        editor.customConfig.uploadImgServer = '#{wangeditor_upload_json_path(:owner_id => options.delete(:owner_id), :owner_type => options.delete(:owner_type))}';
        editor.create();"
