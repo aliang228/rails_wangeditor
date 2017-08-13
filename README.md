@@ -11,7 +11,7 @@ rails_wangeditor will helps your rails app integrate with wangEditor, includes i
 ### Add this to your Gemfile
 
 ```ruby
-  gem 'rails_wangeditor', '>= 0.3.2'
+  gem 'rails_wangeditor', '>= 0.3.1'
 ```
 
 ### Run "bundle" command.
