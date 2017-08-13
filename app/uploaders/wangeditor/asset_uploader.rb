@@ -1,7 +1,4 @@
 # encoding: utf-8
-
-require 'carrierwave/processing/mime_types'
-
 class Wangeditor::AssetUploader < CarrierWave::Uploader::Base
 
   EXT_NAMES = {:image => RailsWangeditor.upload_image_ext}

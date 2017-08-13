@@ -6,11 +6,8 @@ RailsWangeditor.setup do |config|
 
   # Allowed file types for upload.
   config.upload_image_ext = %w[gif jpg jpeg png bmp]
-
-  # replace to your own baidu mapAk
-  config.mapAk = 'zlXbfvvyWN0vrO5toWqGhLspGHMIeFgn';
-
   # Porcess upload image size
+  
   # eg: 1600x1600 => 800x800
   #     1600x800  => 800x400
   #     400x400   => 400x400  # No Change

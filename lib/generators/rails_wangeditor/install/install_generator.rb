@@ -4,8 +4,8 @@ module RailsWangeditor
     desc "Install wangEditor for your application."
 
     def copy_wangeditor_files
-      if ::Rails.version < "3.1.0"
-        warn "Warning: rails_wangeditor  only support Rails3.1+!"
+      if ::Rails.version < "4.0.0"
+        warn "Warning: rails_wangeditor  only support Rails4.0+!"
       else
         template "rails_wangeditor.rb", "config/initializers/rails_wangeditor.rb"
       end
