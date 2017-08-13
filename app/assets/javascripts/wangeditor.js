@@ -1,1 +1,1 @@
-//= require wangEditor
+//= require wangEditor.min

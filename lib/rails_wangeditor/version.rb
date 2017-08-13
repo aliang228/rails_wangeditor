@@ -1,3 +1,3 @@
 module RailsWangeditor
-  VERSION = "0.3.6"
+  VERSION = "0.3.1"
 end

@@ -122,7 +122,7 @@ rails_wangeditor can save upload file information into database.
 
 You can specify the owner for uploaded files, when the owner was destroying, all the uploaded files(belongs to the owner) will be destroyed automatically.
 
-####1. specify the owner_id for wangeditor
+#### 1. specify the owner_id for wangeditor
 
 ```ruby
    <%= form_for @article do |f| %>
@@ -136,7 +136,7 @@ You can specify the owner for uploaded files, when the owner was destroying, all
 Warnning: the @article must be created before this scene, the @article.id should not be empty.
 ```
 
-####2. add has_many_wangeditor_assets in your own model
+#### 2. add has_many_wangeditor_assets in your own model
 
 ```ruby
   class Article < ActiveRecord::Base
@@ -146,7 +146,7 @@ Warnning: the @article must be created before this scene, the @article.id should
   end
 ```
 
-####3. relationship
+#### 3. relationship
 
 ```ruby
   article = Article.first

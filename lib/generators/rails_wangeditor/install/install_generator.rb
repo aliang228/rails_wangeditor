@@ -13,7 +13,7 @@ module RailsWangeditor
 
     def insert_or_copy_js_files
       if File.exist?('app/assets/javascripts/application.js')
-        insert_into_file "app/assets/javascripts/application.js", "//= require wangEditor\n", :after => "jquery_ujs\n"
+        insert_into_file "app/assets/javascripts/application.js", "//= require wangEditor\n", :before => "//= require_tree ."
       else
         copy_file "application.js", "app/assets/javascripts/application.js"
       end
@@ -21,10 +21,10 @@ module RailsWangeditor
 
     def insert_or_copy_css_files
       if File.exist?('app/assets/stylesheets/application.css')
-        insert_into_file "app/assets/stylesheets/application.css", "*= require wangEditor/wangEditor\n", :before => "*= require_self"
+        insert_into_file "app/assets/stylesheets/application.css", "*= require wangEditor/wangEditor.min\n", :before => "*= require_self"
       else
         if File.exist?('app/assets/stylesheets/application.scss')
-          insert_into_file "app/assets/stylesheets/application.scss", "*= require wangEditor/wangEditor\n", :before => " *= require_self"
+          insert_into_file "app/assets/stylesheets/application.scss", "*= require wangEditor/wangEditor.min\n", :before => " *= require_self"
         else
           copy_file "application.css", "app/assets/stylesheets/application.css"
         end
